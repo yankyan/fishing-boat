@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title
+      | Рыбалка на катере
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    nav class="navbar navbar-dark bg-dark"
+      = render "layouts/navigation"
+    div class="jumbotron jumbotron-fluid"
+      div class="container"
+        = yield
+
+      nav class="navbar fixed-bottom navbar-dark bg-dark"
+        = render "layouts/navigation"
